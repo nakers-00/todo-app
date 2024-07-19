@@ -9,10 +9,12 @@ label = sg.Text("Type in a to-do")
 
 input_box = sg.InputText(tooltip="Enter todo", key="todo")
 
-add_button = sg.Button("Add")
+add_button = sg.Button(size=2, key="Add", tooltip="Add todo",
+                       image_source="add.png")
 exit_button = sg.Button("Exit")
 edit_button = sg.Button("Edit")
-complete_button = sg.Button("Complete")
+complete_button = sg.Button(size=2, key="Complete", tooltip="Complete todo",
+                            image_source="complete.png")
 
 list_box = sg.Listbox(values=functions.read_file(), key="todos",
                       enable_events=True, size=(45, 10))
